@@ -49,11 +49,15 @@ class apiSection:
 class apiResource:
 
 	def __init__(self):
+		self.desc = ""
 		self.method = ""
 		self.url = ""
 		self.headers = {}
 		self.status_code = ""
 		self.responses = []
+
+	def set_resource_desc(self, desc):
+		self.desc = desc
 
 	def set_resource_method_url(self, method, url):
 		self.method = method

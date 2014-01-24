@@ -20,20 +20,35 @@
       <form id="blueprint_form" role="form" method="post" action="/">
         <input type="text" class="form-control" placeholder="API Name" name="name" required autofocus>
         <input type="text" class="form-control" placeholder="API Host Name" name="host" required>
-        <input type="textarea" class="form-control" placeholder="API Description" name="api_desc" required>
+        <textarea class="form-control" rows="4" placeholder="API Description" name="desc" required></textarea>
 
         <div id="section_area" class="sec_area">
           <div id="sections">
             <div class="new_section" id="section_0" hidden>
               <input type="text" class="form-control" placeholder="Section Name" name="sec_name" required>
-              <input type="textarea" class="form-control" placeholder="Section Description" name="sec_desc" required>
+              <textarea class="form-control" rows="2" placeholder="Section Description" name="sec_desc" required></textarea>
 
                 <div id="resource_area_0" class="rec_area" hidden>
                   <div class="resource" id="resources_0">
                     <div class="new_resource" id="resource_0_0">
-                      <input type="text" class="form-control" placeholder="Resource Name" name="res_name" required>
-                      <input type="textarea" class="form-control" placeholder="Resource Description" name="res_desc" required>
+                      <select class="form-control" name="res_method">
+                        <option selected="selected">GET</option>
+                        <option>POST</option>
+                        <option>PUT</option>
+                        <option>PATCH</option>
+                        <option>DELETE</option>
+                        <option>OPTIONS</option>
+                        <option>HEAD</option>
+                        <option>TRACE</option>
+                        <option>CONNECT</option>
+                      </select>
+                      <textarea class="form-control" rows="3" placeholder="{Parameters} or ?param=value" name="res_params"></textarea>
+                      <input type="text" class="form-control" placeholder="Resource Endpoint" name="res_endpoint" required>
+                      <textarea class="form-control" rows="2" placeholder="Resource Description" name="res_desc" required></textarea>
                     </div>
+                      <button class="btn btn-default res_header_button" id="res_head_btn_0" type="button">+ Add Header</button>
+                      <button class="btn btn-default res_code_button" id="res_code_btn_0" type="button">+ Add Status Code</button>
+                      <button class="btn btn-default res_resp_button" id="resp_head_btn_0" type="button">+ Add Response</button>
                   </div>
                   <button class="btn btn-success resource_button" id="resource_btn_0" type="button">+ Add Resource</button>
                 </div>
@@ -43,14 +58,35 @@
 
             <div class="new_section" id="section_1">
               <input type="text" class="form-control" placeholder="Section Name" name="sec_name" required>
-              <input type="textarea" class="form-control" placeholder="Section Description" name="sec_desc" required>
+              <textarea class="form-control" rows="2" placeholder="Section Description" name="sec_desc" required></textarea>
 
                 <div id="resource_area_1" class="rec_area" hidden>
                   <div class="resource" id="resources_1">
                     <div class="new_resource" id="resource_1_1">
-                      <input type="text" class="form-control" placeholder="Resource Name" name="res_name" required>
-                      <input type="textarea" class="form-control" placeholder="Resource Description" name="res_desc" required>
+                      <select class="form-control" name="res_method">
+                        <option selected="selected">GET</option>
+                        <option>POST</option>
+                        <option>PUT</option>
+                        <option>PATCH</option>
+                        <option>DELETE</option>
+                        <option>OPTIONS</option>
+                        <option>HEAD</option>
+                        <option>TRACE</option>
+                        <option>CONNECT</option>
+                      </select>
+                      <textarea class="form-control" rows="3" placeholder="{Parameters} or ?param=value" name="res_params"></textarea>
+                      <input type="text" class="form-control" placeholder="Resource Endpoint" name="res_endpoint" required>
+                      <textarea class="form-control" rows="2" placeholder="Resource Description" name="res_desc" required></textarea>
                     </div>
+
+                    <div class="header" id="headers_1" hidden>
+                    <div class="new_header" id="header_1_1">
+                      <input type="text" class="form-control" placeholder="Header" name="res_header" required>
+                    </div>
+
+                    <button class="btn btn-default res_header_button" id="res_head_btn_1" type="button">+ Add Header</button>
+                    <button class="btn btn-default res_code_button" id="res_code_btn_1" type="button">+ Add Status Code</button>
+                    <button class="btn btn-default res_resp_button" id="resp_head_btn_1" type="button">+ Add Response</button>
                   </div>
                   <button class="btn btn-success resource_button" id="resource_btn_1" type="button">+ Add Resource</button>
                 </div>
