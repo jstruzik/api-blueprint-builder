@@ -1,0 +1,25 @@
+#container {
+	margin-left: 5%;
+}
+
+#blueprint_form {
+	width:70%;
+	max-width: 500px;
+}
+
+.sec_area {
+	margin-left:2%;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#blueprint_form input {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.rec_area {
+	margin-left:4%;
+	padding-top:10px;
+	padding-bottom:10px;
+}

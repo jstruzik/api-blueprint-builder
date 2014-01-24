@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="container">
+      <h1>API Blueprint Builder</h1>
+      <form id="blueprint_form" role="form" method="post" action="/">
+        <input type="text" class="form-control" placeholder="API Name" name="name" required autofocus>
+        <input type="text" class="form-control" placeholder="API Host Name" name="host" required>
+        <input type="textarea" class="form-control" placeholder="API Description" name="api_desc" required>
+
+        <div id="section_area" class="sec_area">
+          <div id="sections">
+            <div class="new_section" id="section_0" hidden>
+              <input type="text" class="form-control" placeholder="Section Name" name="sec_name" required>
+              <input type="textarea" class="form-control" placeholder="Section Description" name="sec_desc" required>
+
+                <div id="resource_area_0" class="rec_area" hidden>
+                  <div class="resource" id="resources_0">
+                    <div class="new_resource" id="resource_0_0">
+                      <input type="text" class="form-control" placeholder="Resource Name" name="res_name" required>
+                      <input type="textarea" class="form-control" placeholder="Resource Description" name="res_desc" required>
+                    </div>
+                  </div>
+                  <button class="btn btn-success resource_button" id="resource_btn_0" type="button">+ Add Resource</button>
+                </div>
+
+              <button class="btn btn-success section_resource_button" id="resource_section_btn_0" type="button">+ Add Resource</button>
+            </div>
+
+            <div class="new_section" id="section_1">
+              <input type="text" class="form-control" placeholder="Section Name" name="sec_name" required>
+              <input type="textarea" class="form-control" placeholder="Section Description" name="sec_desc" required>
+
+                <div id="resource_area_1" class="rec_area" hidden>
+                  <div class="resource" id="resources_1">
+                    <div class="new_resource" id="resource_1_1">
+                      <input type="text" class="form-control" placeholder="Resource Name" name="res_name" required>
+                      <input type="textarea" class="form-control" placeholder="Resource Description" name="res_desc" required>
+                    </div>
+                  </div>
+                  <button class="btn btn-success resource_button" id="resource_btn_1" type="button">+ Add Resource</button>
+                </div>
+
+              <button class="btn btn-success section_resource_button" id="resource_section_btn_1" type="button">+ Add Resource</button>
+            </div>
+          </div>
+          <button class="btn btn-success section_button" type="button">+ Add Section</button>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Submit Blueprint</button>
+      </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="static/main.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="static/bootstrap.min.js"></script>
+  </body>
+</html>
